@@ -1,0 +1,19 @@
+<html ng-app="appModule" ng-cloak>
+    <body>
+       <div ng-controller="nameController">
+        <p>Enter you full name: <input ng-model="data.fullname"></input>
+        <div>{{ data.fullname }}</div>
+        <ul>
+            <li ng-repeat="friend in friends">{{ friend }}</li> 
+        </ul>
+       </div>
+       <div ng-controller="friendController">
+        <ul>
+            <li ng-repeat="friend in friends">{{ friend }}</li> 
+        </ul>
+         <div>Missing Full Name: "{{ data.fullname }}"</div>
+       </div>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+       <script src="js/app.js"></script>
+    </body>
+</html>
