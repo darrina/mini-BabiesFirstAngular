@@ -12,8 +12,19 @@
             <li ng-repeat="friend in friends">{{ friend }}</li> 
         </ul>
          <div>Missing Full Name: "{{ data.fullname }}"</div>
+
+        <button ng-click="getTickers()">Get Tickers</button>
+        <div ng-show="data.tickers">
+            <h3>Ticker List</h3>
+            <ul>
+                <li ng-repeat="ticker in data.tickers">Name: {{ ticker.name }}, Value: {{ ticker.value }}</li>
+            </ul>
+        </div>
        </div>
+          
        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
        <script src="js/app.js"></script>
+       <script src="js/controller.js"></script>
+       <script src="js/service.js"></script>
     </body>
 </html>
